@@ -1,11 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 // Home sahifa - to'g'ridan-to'g'ri view qaytaradi
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class,'index'])->name('home');
 
 // About sahifa
 Route::get('/about', function () {
